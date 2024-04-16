@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+    <section class='form'>
+        <h2>&nbsp;&nbsp;EDIT MOVIE&nbsp;&nbsp;</h2>
+        <form action="{{ url_for('manager.edit_post_movie', id=current_data.id) }}" method="post">
+            
+            <div>
+                <label>Title: <br></label>
+                <input type="text" name="title" value="{{current_data.title}}" required>
+            </div>
+            <div>
+                <label><br>Director: <br></label>
+                <input type="text" name="director" value="{{current_data.director}}" required>
+            </div>
+            <div>
+                <label><br>Duration:<br></label>
+                <input type="number" name="duration" value="{{current_data.duration}}" required>
+            </div>
+            <div>
+                <label><br>Main Cast:<br></label>
+                <input type="text" name="main_cast" value="{{current_data.main_cast}}" required>
+            </div>
+            <div>
+                <label><br>Synopsis:<br></label>
+                <input type="text" name="synopsis" value="{{current_data.synopsis}}" required>
+            </div>
+            <div>
+                <label><br>Image:<br></label>
+                <input type="text" name="img" value="{{current_data.img}}" required>
+            </div>
+            
+            <div><input class='submit' type="submit" value="Edit"/></div>
+        
+        
+        </form>
+
+    </section>
+
+
+{% endblock %}

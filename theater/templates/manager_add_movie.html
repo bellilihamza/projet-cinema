@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section class='form'>
+    <h2>&nbsp;&nbsp;ADD A NEW MOVIE&nbsp;&nbsp;</h2>
+    <form action="{{ url_for('manager.add_movie') }}" method="post">
+
+        <div>
+            <label>Title: <br></label>
+            <input type="text" name="title" required>
+        </div>
+        <div>
+            <label><br>Director: <br></label>
+            <input type="text" name="director" required>
+        </div>
+        <div>
+            <label><br>Duration:<br></label>
+            <input type="number" name="duration" required>
+        </div>
+        <div>
+            <label><br>Main Cast:<br></label>
+            <input type="text" name="main_cast" required>
+        </div>
+        <div>
+            <label><br>Synopsis:<br></label>
+            <input type="text" name="synopsis" required>
+        </div>
+        <div>
+            <label><br>Image:<br></label>
+            <input type="text" name="img" required>
+        </div>
+        
+        <div><input class='submit' type="submit" value="Add"/></div>
+     
+      
+    </form>
+
+</section>
+
+
+
+{% endblock %}
